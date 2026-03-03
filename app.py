@@ -37,11 +37,11 @@ forecast = model.predict(future)
 # ----------------------------------
 st.subheader("📈 Prophet Forecast Plot")
 fig1 = model.plot(forecast)
-st.pyplot(fig1)
+st.pyplot(fig1, use_container_width=True)
 
 st.subheader("📊 Forecast Components")
 fig2 = model.plot_components(forecast)
-st.pyplot(fig2)
+st.pyplot(fig2, use_container_width=True)
 
 # ----------------------------------
 # [5] 커스텀 시각화: 실제값 vs 예측값 + 신뢰구간
@@ -65,7 +65,7 @@ ax.set_ylabel("Sun Activity")
 ax.legend(loc='upper left')
 ax.grid(True)
 
-st.pyplot(fig3)
+st.pyplot(fig3, use_container_width=True)
 
 # ----------------------------------
 # [6] 잔차 분석 시각화
@@ -88,7 +88,7 @@ ax2.set_ylabel("Error")
 ax2.legend()
 ax2.grid(True)
 
-st.pyplot(fig4)
+st.pyplot(fig4, use_container_width=True)
 
 # ----------------------------------
 # [7] 잔차 통계 요약 출력
